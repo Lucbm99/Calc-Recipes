@@ -1,20 +1,20 @@
 import React, { useState } from "react";
+import Logo from '../../assets/logo.png';
 import { style } from "./styles";
-import Logo from '../../assets/logo.png'
 
-import { Input } from "../../components/Input";
+import { Alert, Image, Text, View } from 'react-native';
 import { Button } from "../../components/Button";
-import { Text, View, Image, Alert } from 'react-native'
-import { useNavigation, NavigationProp  } from '@react-navigation/native';
+import { Input } from "../../components/Input";
+// import { useNavigation, NavigationProp  } from '@react-navigation/native';
 import { MaterialIcons, Octicons } from '@expo/vector-icons';
 
 export default function Login (){
-    const navigation = useNavigation<NavigationProp<any>>();
+    // const navigation = useNavigation<tionProp<any>>();
 
-    const [email,setEmail]               = useState('caio@gmail.com');
-    const [password,setPassword]         = useState('12345');
-    const [showPassword,setShowPassword] = useState(true);
-    const [loading,setLoading]           = useState(false);
+    const [email, setEmail]               = useState('caio@gmail.com');
+    const [password, setPassword]         = useState('12345');
+    const [showPassword, setShowPassword] = useState(true);
+    const [loading, setLoading]           = useState(false);
 
 
     async function getLogin() {
@@ -25,7 +25,7 @@ export default function Login (){
                 }
 
                 if(email === 'caio@gmail.com' && password === '12345'){
-                    return navigation.reset({routes:[{name :'BottomRoutes'}]});
+                    // return navigation.reset({routes:[{name :'BottomRoutes'}]});
                 }
 
             Alert.alert('Atenção','E-mail ou senha invalida!')
