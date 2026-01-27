@@ -3,13 +3,13 @@ import { themas } from "../../global/themes";
 
 
 export const style = StyleSheet.create({
-    button:{
-        width:200,
-        height:50,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor:themas.Colors.primary,
-        borderRadius:40,
+    button: {
+        width: 200,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: themas.colors.primary,
+        borderRadius: 40,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -20,9 +20,9 @@ export const style = StyleSheet.create({
 
         elevation: 7,
     },
-    textButton:{
-        fontSize:16,
-        color:'#FFFF',
-        fontWeight:'bold'
+    textButton: {
+        fontSize: 16,
+        color: '#FFFF',
+        fontWeight: 'bold'
     },
 })
