@@ -5,11 +5,11 @@ import { style } from "./styles";
 import { Alert, Image, Text, View } from 'react-native';
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-// import { useNavigation, NavigationProp  } from '@react-navigation/native';
+import { useNavigation, NavigationProp  } from '@react-navigation/native';
 import { MaterialIcons, Octicons } from '@expo/vector-icons';
 
 export default function Login (){
-    // const navigation = useNavigation<tionProp<any>>();
+    const navigation = useNavigation<tionProp<any>>();
 
     const [email, setEmail]               = useState('');
     const [password, setPassword]         = useState('');
@@ -24,8 +24,12 @@ export default function Login (){
                 return Alert.alert('Atenção','Informe os campos obrigatórios!')
             }
 
-            if(email === 'caio@gmail.com' && password === '12345'){
-                // return navigation.reset({routes:[{name :'BottomRoutes'}]});
+            if(email === 'caio@gmail.com' && password === '12345') {
+                return navigation.reset({
+                    routes:[
+                        {name :'BottomRoutes'}
+                    ]
+                });
             }
 
             Alert.alert('Atenção','E-mail ou senha inválida!')
