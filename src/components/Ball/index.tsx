@@ -1,7 +1,7 @@
 import React from "react";
 import { style } from "./styles";
 
-import{ View }from 'react-native';
+import { View }from 'react-native';
 
 type Props = {
     color: string

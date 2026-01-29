@@ -1,6 +1,6 @@
 import React from "react";
 import { style } from "./styles";
-import{Text,View}from 'react-native';
+import { Text,View }from 'react-native';
 
 type Props = {
     caption: string,

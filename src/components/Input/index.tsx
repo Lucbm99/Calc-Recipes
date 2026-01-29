@@ -1,6 +1,6 @@
+import { FontAwesome, MaterialIcons, Octicons } from '@expo/vector-icons';
 import React, { forwardRef, Fragment, LegacyRef } from "react";
-import { TextInput, View, TextInputProps, Text, TouchableOpacity, StyleProp, TextStyle} from 'react-native';
-import { MaterialIcons, FontAwesome, Octicons } from '@expo/vector-icons';
+import { StyleProp, Text, TextInput, TextInputProps, TextStyle, TouchableOpacity, View } from 'react-native';
 import { themas } from "../../global/themes";
 import { style } from "./styles";
 
@@ -11,7 +11,7 @@ type IconComponent = React.ComponentType<React.ComponentProps<typeof MaterialIco
 type Props = TextInputProps & {
     IconLeft?: IconComponent,
     IconRight?: IconComponent,
-    iconLeftName?: string,  
+    iconLeftName?: string,
     iconRightName?: string, 
     title?: string,
     onIconLeftPress?: () => void, 

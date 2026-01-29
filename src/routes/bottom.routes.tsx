@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import List from '../pages/list';
-import User from '../pages/user';
 import CustomTabBar from '../components/CustomTabBar';
 import { AuthProviderList } from '../context/authContext_list';
+import List from '../pages/list';
+import User from '../pages/user';
 const Tab = createBottomTabNavigator();
 
 export default function BottomRoutes() {

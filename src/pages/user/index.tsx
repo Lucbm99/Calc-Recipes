@@ -1,8 +1,8 @@
+import { Ionicons } from '@expo/vector-icons';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import React from "react";
-import { style }  from "./styles";
-import {Ionicons} from '@expo/vector-icons';
-import { Text, View, Alert, TouchableOpacity } from "react-native";
-import { useNavigation, NavigationProp  } from '@react-navigation/native';
+import { Alert, Text, TouchableOpacity, View } from "react-native";
+import { style } from "./styles";
 
 export default function User() {
     const navigation = useNavigation<NavigationProp<any>>();

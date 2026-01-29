@@ -1,13 +1,13 @@
 
+import { AntDesign, Entypo, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import React, { useContext } from 'react';
 import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { FontAwesome, Entypo, AntDesign, MaterialIcons} from '@expo/vector-icons';
-import { style } from './styles';
-import { themas } from '../../global/themes';
 import { AuthContextList } from '../../context/authContext_list';
+import { themas } from '../../global/themes';
+import { style } from './styles';
 
 export default({ state, navigation }) => {
 

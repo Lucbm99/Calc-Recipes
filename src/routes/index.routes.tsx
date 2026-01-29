@@ -1,9 +1,8 @@
-import React, { useEffect }from "react";
+import React from "react";
 
 
-import { createStackNavigator }from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import Login from "../pages/login";
-import { themas } from "../global/themes";
 import BottomRoutes from "./bottom.routes";
 
 

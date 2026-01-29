@@ -1,14 +1,15 @@
-import React,{ useState, useContext, useRef} from "react";
-import { style } from "./styles";
-import { Input } from "../../components/Input";
-import { Flag } from "../../components/Flag";
-import { Ball } from "../../components/Ball";
-import { MaterialIcons, AntDesign } from '@expo/vector-icons';
-import { themas } from "../../global/themes";
-import { AuthContextList }   from "../../context/authContext_list";
-import { Text, View, StatusBar, FlatList} from 'react-native'
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
+import React, { useContext, useRef } from "react";
+import { FlatList, StatusBar, Text, View } from 'react-native';
 import { Swipeable } from 'react-native-gesture-handler';
+import { Ball } from "../../components/Ball";
+import { Flag } from "../../components/Flag";
+import { Input } from "../../components/Input";
+import { AuthContextList } from "../../context/authContext_list";
 import { formatDateToBR } from "../../global/functions";
+import { themas } from "../../global/themes";
+import { style } from "./styles";
+import { AuthContextType, PropCard } from '../../global/Props';
 
 export default function List (){
 
@@ -38,11 +39,17 @@ export default function List (){
 
     const handleSwipeOpen = (direction, item, index) => {
         if (direction === 'right') {
+
             handleDelete(item)
+
             swipeableRefs.current[index]?.close();
+
         } else if (direction === 'left') {
+            
             handleEdit(item)
+
             swipeableRefs.current[index]?.close();
+
         }
     }
 

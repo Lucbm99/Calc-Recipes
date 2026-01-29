@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Logo from '../../assets/logo.png';
 import { style } from "./styles";
 
+import { MaterialIcons, Octicons } from '@expo/vector-icons';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { Alert, Image, Text, View } from 'react-native';
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { useNavigation, NavigationProp  } from '@react-navigation/native';
-import { MaterialIcons, Octicons } from '@expo/vector-icons';
 
 export default function Login (){
-    const navigation = useNavigation<tionProp<any>>();
+    const navigation = useNavigation<NavigationProp<any>>();
 
     const [email, setEmail]               = useState('');
     const [password, setPassword]         = useState('');
@@ -20,11 +20,11 @@ export default function Login (){
     async function getLogin() {
         try {
             setLoading(true)
-            if(!email ||!password){
+            if (!email ||!password){
                 return Alert.alert('Atenção','Informe os campos obrigatórios!')
             }
 
-            if(email === 'caio@gmail.com' && password === '12345') {
+            if (email === 'caio@gmail.com' && password === '12345') {
                 return navigation.reset({
                     routes:[
                         {name :'BottomRoutes'}
